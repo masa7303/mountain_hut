@@ -33,13 +33,29 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Clean Blog</h1>
-            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            <h1>管理人ブログ</h1>
+            <span class="subheading">立山ロッジの管理人が不定期に更新するブログです</span>
           </div>
         </div>
       </div>
     </div>
   </header>
+
+  <div id="blog-container">
+    <div class="blogmain">
+      <% 5.times do |x| %>
+        <h2>見出し</h2>
+        <p>
+          ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。
+          <%= link_to "もっと読む", "#" %>
+        </p>
+      <% end %>
+    </div>
+
+    <aside id="sidebar">
+      <%= render "shared/sidebar" %>
+    </aside>
+  </div>
 
 </body>
 
