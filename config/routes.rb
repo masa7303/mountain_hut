@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'blog' => 'blog#index'
 
   resources :articles
+  resources :entries
 end

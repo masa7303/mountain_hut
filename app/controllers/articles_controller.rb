@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @ariticle = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def new
@@ -18,10 +18,16 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to @article, notice: "ニュースを登録しました。"
+      redirect_to :action => "index", notice: "ニュースを登録しました。"
     else
       render "new"
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to :articles
   end
 
   private
