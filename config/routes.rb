@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   post 'inquiry/confirm' => 'inquiry#confirm'   # 確認画面
   post 'inquiry/thanks' => 'inquiry#thanks'     # 送信完了画面
   get 'blog' => 'blog#index'
+
+  resources :articles
 end

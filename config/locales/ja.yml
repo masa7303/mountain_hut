@@ -1,4 +1,6 @@
 ja:
-  time:
-    formats:
-      long: "%d/%m/%Y %H:%M"
+  date:
+    order:
+      - :year
+      - :month
+      - :day
