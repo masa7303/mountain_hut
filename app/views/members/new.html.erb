@@ -1,0 +1,13 @@
+<div class="container">
+
+  <% @page_title = "職員の新規登録" %>
+  <h1><%= @page_title %></h1>
+
+  <%= form_for @member do |form| %>
+    <%# 部分テンプレートの中で親テンプレートのローカル変数を使いたい時 %>
+    <%= render "form", form: form %>
+    <div><%= form.submit %></div>
+
+  <% end %>
+
+</div>

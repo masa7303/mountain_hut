@@ -8,7 +8,7 @@ ja:
   activerecord:
     models:
       member: 会員情報
-      article: ニュース記事
+      article: ニュース
       entry: ブログ記事
     attributes:
       member:

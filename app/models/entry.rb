@@ -14,7 +14,6 @@ class Entry < ApplicationRecord
   scope :published, -> { where("status <> ?", "draft")}
   scope :full, ->(member){
     where("status <> ? OR member_id = ?", "draft", member.id)}
-  scope :readable_for, ->(member){ member? full(member):common }
 
   class << self
     def status_text(status)
@@ -24,5 +23,6 @@ class Entry < ApplicationRecord
     def status_options
       STATUS_VALUES.map { |status| [status_text(status),status]}
     end
+  end
 
 end

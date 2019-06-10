@@ -18,6 +18,10 @@ table.list th {
   text-align: left;
 }
 
-table.list td {
+table.attr th {
+  text-align: right;
+}
+
+table.list td, table.attr td {
   background-color: #cee;
 }
