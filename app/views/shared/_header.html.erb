@@ -36,6 +36,18 @@
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Disabled</a>
             </li>
+            <% if current_member %>
+              <li class="account-menu">
+                <%= current_member.name + "さん" %>
+                <%= menu_link_to "ログアウト", :session,
+                  method: :delete, data: { confirm: "ログアウトしますか？" } %>
+              </li>
+            <% end %>
+            <% if admin_user_signed_in? %>
+              <li>
+              <%= current_admin_user.email %>
+              </li>
+            <% end %>
           </ul>
         </div>
       </nav>
