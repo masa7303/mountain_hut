@@ -7,8 +7,9 @@
     <%= link_to "職員の詳細に戻る", @member %>
   </div>
 
-  <%= form_for @member do |form| %>
-    <%= render "form", form: form %>
+  <%# パラメータ名をaccount、送信先urlを/accountに変更している %>
+  <%= form_for @member, as: "account", url: :account do |form| %>
+    <%= render "shared/member_form", form: form %>
     <div><%= form.submit %></div>
   <% end %>
 </div>

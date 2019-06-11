@@ -1,4 +1,3 @@
-<div class="container">
 <%= render "shared/errors", obj: @member %>
 
   <table class="attr">
@@ -35,5 +34,14 @@
         <%= form.label :administrator %>
       </td>
     </tr>
+    <% if controller.kind_of?(MembersController) %>
+    <tr>
+      <th><%= Member.human_attribute_name(:administrator) %></th>
+      <td>
+        <%= form.check_box :administrator,
+          disabled: !current_member.administrator? %>
+        <%= form.label :administrator %>
+      </td>
+    </tr>
+    <% end %>
   </table>
-</div>

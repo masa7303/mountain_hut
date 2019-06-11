@@ -5,7 +5,7 @@
 
   <%= form_for @member do |form| %>
     <%# 部分テンプレートの中で親テンプレートのローカル変数を使いたい時 %>
-    <%= render "form", form: form %>
+    <%= render "shared/member_form", form: form %>
     <div><%= form.submit %></div>
 
   <% end %>
