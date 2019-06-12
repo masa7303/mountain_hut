@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,11 +43,13 @@
   <div id="blog-container">
     <div class="blogmain">
       <% 5.times do |x| %>
-        <h2>見出し</h2>
-        <p>
-          ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。
-          <%= link_to "もっと読む", "#" %>
-        </p>
+        <div class="p-3 mb-3 bg-light rounded">
+          <h2>見出し</h2>
+          <p>
+            ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。
+            <%= link_to "もっと読む", "#" %>
+          </p>
+        </div>
       <% end %>
     </div>
 

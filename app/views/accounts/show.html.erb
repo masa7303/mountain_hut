@@ -1,9 +1,11 @@
-<% @page_title = "マイアカウント" %>
+<div class="container">
+  <% @page_title = "マイアカウント" %>
+  <h1><%= @page_title %></h1>
 
-<h1><%= @page_title %></h1>
+  <div class="text-right">
+    <%= link_to "アカウント情報の編集", :edit_account %> |
+    <%= link_to "パスワードの変更", :edit_password %>
+  </div>
 
-<ul class="toolbar">
-  <%= link_to "アカウント情報の編集", :edit_account %>
-</ul>
-
-<%= render "members/body" %>
+  <%= render "members/body" %>
+</div>

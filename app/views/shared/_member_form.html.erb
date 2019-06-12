@@ -28,6 +28,14 @@
       <td><%= form.text_field :email %></td>
     </tr>
     <tr>
+    <%# メンバーを新規登録する時だけパスワードの入力欄が表示される %>
+    <% if @member.new_record? %>
+    <tr>
+      <th><%= form.label :password, "パスワード" %></th>
+      <td><%= form.text_field :password %></td>
+    </tr>
+    <% end %>
+    <tr>
       <th><%= Member.human_attribute_name(:administrator) %></th>
       <td>
         <%= form.check_box :administrator %>

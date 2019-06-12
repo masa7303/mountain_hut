@@ -18,9 +18,19 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to :action => "index", notice: "ニュースを登録しました。"
+      redirect_to @article, notice: "ニュースを登録しました。"
     else
       render "new"
+    end
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    @article.assign_attributes(params[:article])
+    if @article.save
+      redirect_to @article, notice: "ニュース記事を更新しました。"
+    else
+      render "edit"
     end
   end
 

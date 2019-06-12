@@ -13,4 +13,9 @@ class Member < ApplicationRecord
 
   validates :email, email: { allow_blank: true }
 
+  # 読み書き可能な属性を追加
+  attr_accessor :current_password
+  # current_passwordに値がセットされている時には常に「空文字でもnilでもない」ことを確認
+  validates :password, presence: { if: :current_password }
+
 end

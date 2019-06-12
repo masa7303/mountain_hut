@@ -1,5 +1,9 @@
 <div class="container">
 
+  <div class="toolbar">
+    <%= link_to "会員の新規登録", :new_member %>
+  </div>
+
   <% @page_title = "職員名簿" %>
   <h1><%= @page_title %></h1>
 
@@ -25,6 +29,7 @@
         <% end %>
       </tbody>
     </table>
+    <%= paginate @members %>
   <% else %>
     <p>会員情報がありません</p>
   <% end %>

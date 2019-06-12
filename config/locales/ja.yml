@@ -7,9 +7,9 @@ ja:
 
   activerecord:
     models:
-      member: 会員情報
+      member: 職員
       article: ニュース
-      entry: ブログ記事
+      entry: ブログ
     attributes:
       member:
         number: 背番号

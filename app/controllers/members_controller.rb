@@ -1,6 +1,7 @@
 class MembersController < ApplicationController
   def index
     @members = Member.order("id")
+    .page(params[:page]).per(15)
   end
 
   def show
