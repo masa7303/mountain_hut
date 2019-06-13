@@ -14,10 +14,13 @@
       <main>
         <div id="home" class="big-bg">
           <div class="home-content wrapper">
-            <p>Welcome To Our House</p>
+            <p class="home-title">Welcome To Our House</p>
               <button type="button" class="btn btn-info">メニュー</button>
           </div><!-- /.home-content -->
         </div><!-- /#home -->
+        <script type="text/javascript">
+          $(".big-bg").hide().fadeIn(3000);          
+        </script>
       </main>
       <footer>
         <%= render "shared/footer" %>

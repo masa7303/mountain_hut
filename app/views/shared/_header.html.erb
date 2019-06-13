@@ -27,19 +27,6 @@
             <li class="nav-item active">
               <a class="nav-link" href="/inquiry">お問い合わせ<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/admin">管理者用<span class="sr-only">(current)</span></a>
-            </li >
-            <li class="nav-item active">
-              <a class="nav-link" href="/login">職員用<span class="sr-only">(current)</span></a>
-            </li >
-            <% if current_member %>
-              <li class="nav-link">
-                <%= link_to current_member.name + "さん", :account %>
-                <%= link_to "ログアウト", :session,
-                  method: :delete, data: { confirm: "ログアウトしますか？" } %>
-              </li>
-            <% end %>
           </ul>
         </div>
       </nav>
