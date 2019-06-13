@@ -13,11 +13,6 @@ Rails.application.routes.draw do
   resource :account, only:[:show, :edit, :update]
   resource :password, only:[:show, :edit, :update]
 
-  # 会員ごとの記事一覧だけネスとされたリソース
-  resources :members do
-    resources :entries, only:[:index]
-  end
-
   resources :articles
   resources :entries
 end

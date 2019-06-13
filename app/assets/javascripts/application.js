@@ -19,3 +19,4 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+$(".big-bg").hide().fadeIn(3000);          
