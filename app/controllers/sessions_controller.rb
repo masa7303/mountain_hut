@@ -16,4 +16,6 @@ class SessionsController < ApplicationController
     redirect_to :root
   end
 
+  def login_form
+  end
 end
