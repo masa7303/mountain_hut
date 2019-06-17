@@ -1,2 +1,19 @@
-<h1>Entries#show</h1>
-<p>Find me in app/views/entries/show.html.erb</p>
+<div class="container">
+  <% @page_title = @entry.title %>
+  <h1><%= @entry.title %></h1>
+
+  <table class="attr">
+    <tr>
+      <th width="100">タイトル</th>
+      <td><%= @entry.title %></td>
+    </tr>
+    <tr>
+      <th>本文</th>
+      <td><%= simple_format(@entry.body) %></td>
+    </tr>
+    <tr>
+      <th>掲載開始日時</th>
+      <td><%= @entry.posted_at.strftime("%Y/%m/%d %H:%M") %></td>
+    </tr>
+  </table>
+</div>
