@@ -1,16 +1,10 @@
-<h2>最新記事</h2>
-<%
-  entries = Entry.order(released_at: :desc).limit(5)
-%>
-<ul>
-  <% entries.each do |entry| %>
-    <li><%= link_to entry.title, entry %></li>
-  <% end %>
-</ul>
+<div class="sidebar_title">
+  <h2>Lately<h2>
+</div>
 
-<h2>職員のブログ</h2>
-<ul>
-  <% 5.times do |i| %>
-    <li><%= link_to "ブログの見出し","#" %></li>
-  <% end %>
-</ul>
+  <% entries = Entry.order(released_at: :desc).limit(5) %>
+  <ul class="test">
+      <% entries.each do |entry| %>
+        <li><%= link_to entry.title, entry %></li>
+      <% end %>
+  </ul>
