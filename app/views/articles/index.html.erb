@@ -1,5 +1,3 @@
-<div class="container">
-
   <br>
 
   <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
@@ -16,46 +14,17 @@
         <div class="post-preview">
           <a href="post.html">
             <% @articles.each do |article| %>
-              <h2 class="post-title-back">
-                <%= link_to article.title, article, class: "post-title" %>
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
+              <div class="box27">
+                <span class="box-title"><%= article.released_at %></span>
+                  <h2>
+                    <%= link_to article.title, article, class: "post-title" %>
+                  </h2>
+              </div>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              <%= link_to article.released_at.strftime("%Y/%m/%d %H:%M") %></p>
             <% end %>
         </div>
       </div>
     </div>
   </div>
-
-  <% if @articles.present? %>
-    <table class="list table-striped">
-      <thead>
-        <tr>
-          <th>タイトル</th>
-          <th>日時</th>
-          <th>操作</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @articles.each do |article| %>
-          <tr>
-            <td><%= link_to article.title, article %></td>
-            <td><%= link_to article.released_at.strftime("%Y/%m/%d %H:%M") %></td>
-            <td>
-              <%= link_to "編集", [:edit, article] %> |
-              <%= link_to "削除", article, method: :delete, data: { confirm: "本当に削除しますか？" } %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <% else %>
-    <p>ニュースがありません</p>
-  <% end %>
 
 </div>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'inquiry/confirm' => 'inquiry#confirm'   # 確認画面
   post 'inquiry/thanks' => 'inquiry#thanks'     # 送信完了画面
   get 'introduction' => 'introductions#index'
+  get 'price' => 'top#show'
 
   resource :session, only:[:create, :destroy]
   resource :account, only:[:show, :edit, :update]

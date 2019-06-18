@@ -11,5 +11,13 @@ ActiveAdmin.register Entry do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+form do |f|
+        f.inputs 'Entry' do
+            f.input :title
+            f.input :body, as: :medium_editor, input_html: { data: { options: '{"spellcheck":false,"toolbar":{"buttons":["bold","italic","underline","anchor"]}}' } }
+            f.input :posted_at
+            f.input :status
+        end
+        f.actions
+    end
 end

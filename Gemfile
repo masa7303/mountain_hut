@@ -20,6 +20,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rb-readline'
 end
 
 group :test do
@@ -42,3 +43,4 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem "font-awesome-rails"
+gem 'activeadmin_medium_editor'
