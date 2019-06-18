@@ -16,8 +16,8 @@
         <div class="post-preview">
           <a href="post.html">
             <% @articles.each do |article| %>
-              <h2 class="post-title">
-                <%= link_to article.title, article %>
+              <h2 class="post-title-back">
+                <%= link_to article.title, article, class: "post-title" %>
               </h2>
               <h3 class="post-subtitle">
                 Problems look mighty small from 150 miles up

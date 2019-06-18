@@ -1,4 +1,12 @@
-.post-title {
+.post-title-back {
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-weight: 800;
+  padding: 0.5em;/*文字周りの余白*/
+  text-decoration: none;
+  background: #fffaf4;/*背景色*/
+  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+}
+
+.post-title {
+  color: black;/*文字色*/
 }
