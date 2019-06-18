@@ -42,3 +42,4 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem "font-awesome-rails"
+gem 'activeadmin_medium_editor'
