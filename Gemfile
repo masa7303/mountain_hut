@@ -44,3 +44,4 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 gem "font-awesome-rails"
 gem 'activeadmin_medium_editor'
+gem 'sanitize'
