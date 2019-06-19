@@ -1,6 +1,6 @@
 module EntryHelper
     def first_image(body)
-        Nokogiri::HTML(body).xpath("//img")[0].to_s
+        Nokogiri::HTML(body).xpath("//img")[0]['src'].to_s
     end
 
     def remove_image(body)

@@ -23,7 +23,7 @@
             <h2><%= entry.title %></h2>
             <p>
               <div class="index-image">
-                <%= sanitize(first_image(entry.body)) %>
+                <%= image_tag(first_image(entry.body), size: "100x100") %>
               </div>
               <%= entry.title %>
               <%= sanitize(remove_image(entry.body).truncate(100))%>
