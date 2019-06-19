@@ -11,6 +11,16 @@ ActiveAdmin.register Entry do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+
+    
+    index do
+        selectable_column
+        column :title
+        column :body do |entry|
+            sanitize(remove_image(entry.body).truncate(100))
+        end
+    end
+
     form do |f|
         f.inputs 'Entry' do
             f.input :title
@@ -19,5 +29,15 @@ ActiveAdmin.register Entry do
             f.input :status
         end
         f.actions
+    end
+
+    show do
+        attributes_table do
+            row :title
+            row (:body) {|entry| sanitize(entry.body)} 
+            row :posted_at
+            row :status
+        end
+        active_admin_comments
     end
 end
