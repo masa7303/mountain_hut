@@ -23,7 +23,9 @@
             <h2><%= entry.title %></h2>
             <p>
               <div class="index-image">
-                <%= image_tag(first_image(entry.body), size: "100x100") %>
+                <% if first_image(entry.body) != nil %>
+                  <%= image_tag(first_image(entry.body), size: "100x100") %>
+                <% end %>
               </div>
               <%= entry.title %>
               <%= sanitize(remove_image(entry.body).truncate(100))%>
