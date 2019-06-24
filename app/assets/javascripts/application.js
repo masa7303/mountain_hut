@@ -19,5 +19,3 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
-
-$("#home").hide().fadeIn(3000);
