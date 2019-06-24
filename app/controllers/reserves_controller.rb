@@ -9,15 +9,22 @@ class ReservesController < ApplicationController
 
   def create
     @reserve = Reserve.new(reserve_params)
-    count = Reserve.where(reservation_start: @reserve.reservation_start..@reserve.reservation_end,
-      reservation_end: @reserve.reservation_start..@reserve.reservation_end)
-    capacity = count.sum(:number_of_people)
-    if capacity < 10 && @reserve.save
-      redirect_to @reserve, notice: "予約を受付けました"
-    else
+    @reservations = Reserve.where('reservation_start <= ? and reservation_end >= ?', @reserve.reservation_end, @reserve.reservation_start)
+
+    count = @reservations.count
+    capacity = @reservations.sum(:number_of_people)
+
+    if capacity + @reserve.number_of_people > 10
+      flash.alert = "ご希望の宿泊期間はは利用者数の上限に達しているためご利用できません"
+    elsif count > 5
       flash.alert = "ご希望の宿泊予定日は満室なためご利用できません"
+    elsif @reserve.save
+      redirect_to @reserve, notice: "予約を受付けました"
     end
   end
+
+  
+
 
   private
 
