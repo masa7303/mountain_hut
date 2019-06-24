@@ -1,0 +1,40 @@
+    <h1 class="center-title">予約情報</h1>
+
+    <table class="table">
+      <tr>
+        <th>宿泊開始日</th>
+        <td><%= @reserve.reservation_start %></td>
+      </tr>
+      <tr>
+        <th>宿泊最終日</th>
+        <td><%= @reserve.reservation_end %></td>
+      </tr>
+      <tr>
+        <th>宿泊人数</th>
+        <td><%= @reserve.number_of_people %> 人</td>
+      </tr>
+      <tr>
+        <th>名前</th>
+        <td><%= @reserve.name %></td>
+      </tr>
+      <tr>
+        <th>フリガナ</th>
+        <td><%= @reserve.phonetic %></td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td><%= @reserve.phone_number %></td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= @reserve.mail %></td>
+      </tr>
+      <tr>
+        <th>宿泊内容</th>
+        <td><%= @reserve.plan %></td>
+      </tr>
+      <tr>
+        <th>パスワード</th>
+        <td><%= @reserve.password %></td>
+      </tr>
+    </table>

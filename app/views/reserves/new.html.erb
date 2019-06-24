@@ -1,10 +1,12 @@
+<% if flash.alert %><p class="alert"><%= flash.alert %></p><% end %>
+
 <%= form_for @reserve do |f| %>
     <h1 class="center-title">予約情報</h1>
 
     <table class="table">
       <tr>
         <th>宿泊予定日</th>
-        <td><%= f.date_select :reservation_day %></td>
+        <td><%= f.date_select :reservation_start %> 〜 <%= f.date_select :reservation_end %></td>
       </tr>
       <tr>
         <th>宿泊人数</th>
