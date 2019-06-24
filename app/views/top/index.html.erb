@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
   <head>
-    <title><%= page_title %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -18,12 +12,8 @@
               <button type="button" class="btn btn-info">メニュー</button>
           </div><!-- /.home-content -->
         </div><!-- /#home -->
-        <script type="text/javascript">
-          $(".big-bg").hide().fadeIn(3000);
-        </script>
       </main>
       <footer>
         <%= render "shared/footer" %>
       </footer>
   </body>
-</html>
