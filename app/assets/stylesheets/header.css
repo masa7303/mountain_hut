@@ -1,3 +1,15 @@
 .pull-right {
   float: right !important;
 }
+
+.nav-link {
+  -webkit-transition: all 0.3s ease !important;
+  -moz-transition: all 0.3s ease !important;
+  -o-transition: all 0.3s ease !important;
+  transition: all  0.6s ease !important;
+  font-weight: bold !important;
+}
+
+.nav-link:hover {
+  color: #00FFFF !important;
+}
