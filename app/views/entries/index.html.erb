@@ -14,36 +14,35 @@
     </div>
   </header>
 
-  <div id="blog-container">
-
-    <div class="blogmain">
-      <% if @entries.present? %>
-        <% @entries.each do |entry| %>
-            <h2><%= entry.title %></h2>
-            <p>
-              <div class="index-image">
-                <% if first_image(entry.body) != nil %>
-                  <%= image_tag(first_image(entry.body), size: "100x100") %>
-                <% end %>
-              </div>
-              <%= entry.title %>
-                <div class="entry-body">
-                  <%= sanitize(remove_image(entry.body).truncate(100)) %>
-                  <%= link_to "もっと読む", entry %>
-                </div>
-            </p>
-        <% end %>
-        <%= paginate @entries %>
-      <% else %>
-        <p>記事がありません</p>
-      <% end %>
+  <% @entries.each do |entry| %>
+    <div class="blog-card">
+      <div class="meta">
+        <div class="photo">
+          <% if first_image(entry.body) != nil %>
+            <%= image_tag(first_image(entry.body), size: "250x250") %>
+          <% else %>
+            <%= image_tag 'noimage.png', size: "250x250" %>
+          <% end %>
+        </div>
+          <ul class="details">
+            <li class="date"><%= entry.posted_at.strftime("%Y/%m/%d") %></li>
+          </ul>
+      </div>
+        <div class="description">
+          <h1><%= entry.title %></h1>
+          <p><%= sanitize(remove_image(entry.body).truncate(100)) %></p>
+          <p class="read-more">
+            <%= link_to "もっと読む", entry %>
+          </p>
+        </div>
     </div>
+  <% end %>
+  <aside id="sidebar">
+    <%= render "shared/sidebar" %>
+  </aside>
 
-    <aside id="sidebar">
-      <%= render "shared/sidebar" %>
-    </aside>
+  <div class="paginate">
+    <%= paginate @entries %>
   </div>
 
 </body>
-
-</html>
