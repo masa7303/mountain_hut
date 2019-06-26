@@ -5,7 +5,7 @@
 }
 
 /* 右の枠 */
-aside#sidebar {
+aside.sidebar {
   width:230px;
   padding: 5px;
   font-size: 86%;

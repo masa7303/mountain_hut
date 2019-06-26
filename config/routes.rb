@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'top#index'
-  get 'inquiry' => 'inquiry#index'              # 入力画面
-  post 'inquiry/confirm' => 'inquiry#confirm'   # 確認画面
-  post 'inquiry/thanks' => 'inquiry#thanks'     # 送信完了画面
+  # get 'inquiry' => 'inquiry#index'              # 入力画面
+  # post 'inquiry/confirm' => 'inquiry#confirm'   # 確認画面
+  # post 'inquiry/thanks' => 'inquiry#thanks'     # 送信完了画面
   get 'introduction' => 'introductions#index'
   get 'price' => 'top#show'
 
@@ -16,4 +16,10 @@ Rails.application.routes.draw do
   resources :articles
   resources :entries
   resources :reserves
+  resources :inquiry do
+    collection do
+      post 'confirm'
+      post 'thanks'
+    end
+  end
 end

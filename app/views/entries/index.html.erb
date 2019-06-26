@@ -15,31 +15,33 @@
   </header>
 
   <% @entries.each do |entry| %>
-    <div class="blog-card">
-      <div class="meta">
-        <div class="photo">
-          <% if first_image(entry.body) != nil %>
-            <%= image_tag(first_image(entry.body), size: "250x250") %>
-          <% else %>
-            <%= image_tag 'noimage.png', size: "250x250" %>
-          <% end %>
+      <div class="blog-card">
+        <div class="meta">
+          <div class="photo">
+            <% if first_image(entry.body) != nil %>
+              <%= image_tag(first_image(entry.body), size: "250x250") %>
+            <% else %>
+              <%= image_tag 'noimage.png', size: "250x250" %>
+            <% end %>
+          </div>
+            <ul class="details">
+              <li class="date"><%= entry.posted_at.strftime("%Y/%m/%d") %></li>
+            </ul>
         </div>
-          <ul class="details">
-            <li class="date"><%= entry.posted_at.strftime("%Y/%m/%d") %></li>
-          </ul>
+          <div class="description">
+            <h1><%= entry.title %></h1>
+            <p><%= sanitize(remove_image(entry.body).truncate(100)) %></p>
+            <p class="read-more">
+              <%= link_to "もっと読む", entry %>
+            </p>
+          </div>
       </div>
-        <div class="description">
-          <h1><%= entry.title %></h1>
-          <p><%= sanitize(remove_image(entry.body).truncate(100)) %></p>
-          <p class="read-more">
-            <%= link_to "もっと読む", entry %>
-          </p>
-        </div>
-    </div>
   <% end %>
-  <aside id="sidebar">
+<div class="d-flex">
+  <aside class="sidebar">
     <%= render "shared/sidebar" %>
   </aside>
+  </div>
 
   <div class="paginate">
     <%= paginate @entries %>

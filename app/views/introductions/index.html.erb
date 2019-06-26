@@ -1,5 +1,5 @@
 <main role="main">
-
+  <div class="container">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -58,11 +58,12 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">癒しの原風景</h2>
+            <p class="lead">A岳は、アルプスの女王と呼ばれる優雅で美しい山です。<br>
+                            白い花崗岩砂礫に、コマクサをはじめ色とりどりの高山植物が咲き、四季を通して比較的安全に登れる癒しの別天地、北アルプスに初めて登る山として多くの登山者に親しまれています。</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <%= image_tag("river.jpg", :class => "featurette-image img-fluid mx-auto") %>
           </div>
         </div>
 
@@ -74,7 +75,7 @@
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <%= image_tag("flower.jpg", :class => "featurette-image img-fluid mx-auto") %>
           </div>
         </div>
 
@@ -86,7 +87,7 @@
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <%= image_tag("walking.jpg", :class => "featurette-image img-fluid mx-auto") %>
           </div>
         </div>
 
@@ -105,4 +106,4 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="../../assets/js/vendor/holder.min.js"></script>
-  </body>
+  </div>
