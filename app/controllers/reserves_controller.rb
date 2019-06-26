@@ -4,7 +4,7 @@ class ReservesController < ApplicationController
   end
 
   def show
-    @reserve = Reserve.find(params[:id])
+    @reserve = Reserve.find(reserve_params)
   end
 
   def create
@@ -23,7 +23,7 @@ class ReservesController < ApplicationController
     end
   end
 
-  
+
 
 
   private

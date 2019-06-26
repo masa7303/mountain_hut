@@ -1,29 +1,15 @@
-<!DOCTYPE html>
-<html>
   <head>
-    <title><%= page_title %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render "shared/header" %>
       <main>
         <div id="home" class="big-bg">
           <div class="home-content wrapper">
-            <p class="home-title">Welcome To Our House</p>
+            <p class="home-title mast__title js-spanize">Welcome To Our House</p>
               <button type="button" class="btn btn-info">メニュー</button>
           </div><!-- /.home-content -->
         </div><!-- /#home -->
-        <script type="text/javascript">
-          $(".big-bg").hide().fadeIn(3000);
-        </script>
       </main>
-      <footer>
-        <%= render "shared/footer" %>
-      </footer>
+      <%= javascript_include_tag 'top' %>
   </body>
-</html>

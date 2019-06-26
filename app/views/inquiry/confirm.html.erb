@@ -2,7 +2,7 @@
     <h1 class="center-title">お問い合わせ</h1>
 
     <main>
-      <%= form_for @inquiry, :url => inquiry_thanks_path do |f| %>
+      <%= form_for @inquiry, :url => thanks_inquiry_index_path do |f| %>
         <table class="table">
           <tr>
             <th>名前</th>
@@ -26,7 +26,7 @@
             </td>
           </tr>
         </table>
-        <%= f.submit '送信', class: 'btn btn-primary btn-lg btn-block' %>
+        <%= f.submit '送信', class: 'btn btn-primary mx-auto d-block' %>
       <% end %>
     </main>
 </div>

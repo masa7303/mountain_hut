@@ -14,14 +14,11 @@
     </div>
   </header>
 
-  <div class="conteiner row">
-    <div  class="col-3">
-      <%= render "shared/sidebar" %>
-    </div>
-    <div class="col-9">
+  <div id="blog-container">
+
+    <div class="blogmain">
       <% if @entries.present? %>
         <% @entries.each do |entry| %>
-          <div class="p-3 mb-3 bg-light rounded">
             <h2><%= entry.title %></h2>
             <p>
               <div class="index-image">
@@ -30,16 +27,23 @@
                 <% end %>
               </div>
               <%= entry.title %>
-              <%= sanitize(remove_image(entry.body).truncate(100))%>
-
-              <%= link_to "もっと読む", entry %>
+                <div class="entry-body">
+                  <%= sanitize(remove_image(entry.body).truncate(100)) %>
+                  <%= link_to "もっと読む", entry %>
+                </div>
             </p>
-          </div>
         <% end %>
         <%= paginate @entries %>
       <% else %>
         <p>記事がありません</p>
       <% end %>
     </div>
+
+    <aside id="sidebar">
+      <%= render "shared/sidebar" %>
+    </aside>
   </div>
+
 </body>
+
+</html>

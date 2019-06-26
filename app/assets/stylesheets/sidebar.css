@@ -5,11 +5,11 @@
 }
 
 /* 右の枠 */
-aside#sidebar {
-  float: left;
-  width: 230px;
+aside.sidebar {
+  width:230px;
   padding: 5px;
   font-size: 86%;
+  flex-direction: row;
 }
 
 .test {
