@@ -3,8 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 gem 'rails', '~> 5.2.3'
-gem 'sqlite3', groups: %w(test development), require: false
-gem 'pg', groups: %w(production), require: false
+gem 'sqlite3', group: [:development, :test]
+gem 'pg', group: :production
 gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
