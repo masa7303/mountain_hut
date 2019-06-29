@@ -1,5 +1,3 @@
-body>
-
   <header class="masthead" style="background-image: url('assets/home-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
@@ -13,37 +11,43 @@ body>
       </div>
     </div>
   </header>
-  <% @entries.each do |entry| %>
-      <div class="blog-card">
-        <div class="meta">
-          <div class="photo">
-            <% if first_image(entry.body) != nil %>
-              <%= image_tag(first_image(entry.body), size: "250x250") %>
-            <% else %>
-              <%= image_tag 'noimage.png', size: "250x250" %>
-            <% end %>
+
+  <div class="row">
+    <div class="col-8">
+      <div class="pull-right">
+        <% @entries.each do |entry| %>
+          <div class="blog-card">
+            <div class="meta">
+              <div class="photo">
+                <% if first_image(entry.body) != nil %>
+                  <%= image_tag(first_image(entry.body), size: "250x250") %>
+                <% else %>
+                  <%= image_tag 'noimage.png', size: "250x250" %>
+                <% end %>
+              </div>
+                <ul class="details">
+                  <li class="date"><%= entry.posted_at.strftime("%Y/%m/%d") %></li>
+                </ul>
+            </div>
+              <div class="description">
+                <h1><%= entry.title %></h1>
+                <p><%= sanitize(remove_image(entry.body).truncate(100)) %></p>
+                <p class="read-more">
+                <%= link_to "もっと読む", entry %>
+                </p>
+              </div>
           </div>
-            <ul class="details">
-              <li class="date"><%= entry.posted_at.strftime("%Y/%m/%d") %></li>
-            </ul>
-        </div>
-          <div class="description">
-            <h1><%= entry.title %></h1>
-            <p><%= sanitize(remove_image(entry.body).truncate(100)) %></p>
-            <p class="read-more">
-              <%= link_to "もっと読む", entry %>
-            </p>
-          </div>
+        <% end %>
       </div>
-  <% end %>
-<div class="col-3">
-  <aside class="sidebar">
-    <%= render "shared/sidebar" %>
-  </aside>
-  </div>
-  
-  <div class="paginate">
-    <%= paginate @entries %>
+    </div>
+
+    <div class="col-4">
+      <aside class="sidebar">
+        <%= render "shared/sidebar" %>
+      </aside>
+    </div>
   </div>
 
-</body>
+  <ul class="pagination">
+    <%= paginate @entries %>
+  </ul>

@@ -15,7 +15,7 @@
           <a href="post.html">
             <% @articles.each do |article| %>
               <div class="box27">
-                <span class="box-title"><%= article.released_at %></span>
+                <span class="box-title"><%= article.released_at.strftime("%Y/%m/%d") %></span>
                   <h2>
                     <%= link_to article.title, article, class: "post-title" %>
                   </h2>

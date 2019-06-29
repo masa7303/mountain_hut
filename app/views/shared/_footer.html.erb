@@ -7,41 +7,34 @@
 	<section id="footer">
 		<div class="container">
 			<div class="row text-center text-xs-center text-sm-left text-md-left">
-				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-					</ul>
+				<div class="col-7">
+          <div class="float-right">
+  					<h5>Quick links</h5>
+  					<ul class="list-unstyled quick-links">
+  						<li><%= link_to " トップ", root_path, class: "fa fa-angle-double-right" %><span class="sr-only">(current)</span></li>
+              <li><%= link_to " 紹介", introduction_path, class: "fa fa-angle-double-right" %><span class="sr-only">(current)</span></li>
+              <li><%= link_to " 料金", price_path, class: "fa fa-angle-double-right" %><span class="sr-only">(current)</span></li>
+              <li><%= link_to " 予約", new_reserf_path, class: "fa fa-angle-double-right" %><span class="sr-only">(current)</span></li>
+              <li><%= link_to " ブログ", entries_path, class: "fa fa-angle-double-right" %><span class="sr-only">(current)</span></li>
+              <li><%= link_to " ニュース", articles_path, class: "fa fa-angle-double-right" %><span class="sr-only">(current)</span></li>
+              <li><%= link_to " お問い合わせ", inquiry_index_path, class: "fa fa-angle-double-right" %><span class="sr-only">(current)</span></li>
+  					</ul>
+          </div>
 				</div>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Information</h5>
-					<ul class="list-unstyled quick-links">
-						<li class="footer-info"><i class="fa fa-angle-double-right"></i>TEL   : 076-111-2222</li>
-						<li class="footer-info"><i class="fa fa-angle-double-right"></i>MAIL  : abc@gmail.com</li>
-						<li class="footer-info"><i class="fa fa-angle-double-right"></i>place : A県B町C番地</li>
-					</ul>
+				<div class="col-5">
+          <div class="float-right">
+  					<h5>Information</h5>
+  					<ul class="list-unstyled quick-links">
+  						<li class="footer-info"><i class="fa fa-angle-double-right"></i>TEL   : 076-111-2222</li>
+  						<li class="footer-info"><i class="fa fa-angle-double-right"></i>MAIL  : abc@gmail.com</li>
+  						<li class="footer-info"><i class="fa fa-angle-double-right"></i>place : A県B町C番地</li>
+  					</ul>
+          </div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				</hr>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-					<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+					<p class="h6">&copy Teteyama Lodge right Reversed.</p>
 				</div>
 				</hr>
 			</div>
