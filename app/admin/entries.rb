@@ -26,7 +26,6 @@ ActiveAdmin.register Entry do
             f.input :title
             f.input :body, as: :medium_editor, input_html: { data: { options: '{"spellcheck":false,"toolbar":{"buttons":["bold","italic","underline","anchor"]}}' } }
             f.input :posted_at
-            f.input :status
         end
         f.actions
     end
@@ -36,7 +35,6 @@ ActiveAdmin.register Entry do
             row :title
             row (:body) {|entry| sanitize(entry.body)}
             row :posted_at
-            row :status
         end
         active_admin_comments
     end
