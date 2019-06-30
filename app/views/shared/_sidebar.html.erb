@@ -2,7 +2,7 @@
   <h2>Lately<h2>
 </div>
 
-  <% entries = Entry.order(released_at: :desc).limit(5) %>
+  <% entries = Entry.order(posted_at: :desc).limit(5) %>
   <ul class="test">
       <% entries.each do |entry| %>
         <li><%= link_to entry.title, entry %></li>
