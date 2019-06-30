@@ -4,14 +4,16 @@ table.list, table.attr {
 }
 
 table.list th, table.attr th {
-  background-color: #343a40;
+  background-color: #364e96;
   color: white;
   font-weight: normal;
+  height: 50px;
 }
 
 table.list td, table.list th,
 table.attr td, table.attr th {
   padding: 4px;
+  height: 50px;
 }
 
 table.list th {
