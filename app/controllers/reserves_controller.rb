@@ -4,11 +4,11 @@ class ReservesController < ApplicationController
   end
 
   def show
-    @reserve = Reserve.find(reserve_params)
+    @reserve = Reserve.find(params[:id])
   end
 
   def create
-    @reserve = Reserve.new(reserve_params)
+    @reserve = Reserve.new(params[:id])
     @reservations = Reserve.where('reservation_start <= ? and reservation_end >= ?', @reserve.reservation_end, @reserve.reservation_start)
 
     count = @reservations.count
