@@ -7,7 +7,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.datetime :released_at, null: false
       t.datetime :expired_at
       t.boolean :member_only, null: false, default: false
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end

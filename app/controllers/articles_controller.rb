@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.order(released_at: :desc)  # 降順
+    @articles = Article.order(released_at: :desc).page(params[:page]).per(5)  # 降順
   end
 
   def show

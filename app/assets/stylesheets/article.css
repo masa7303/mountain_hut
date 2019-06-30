@@ -3,8 +3,8 @@
   font-weight: 800;
   padding: 0.5em;/*文字周りの余白*/
   text-decoration: none;
-  background: #fffaf4;/*背景色*/
-  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+  background: #364e96;/*背景色*/
+  border-left: solid 5px #364e96;/*左線（実線 太さ 色）*/
 }
 
 .post-title {
@@ -15,7 +15,7 @@
     position: relative;
     margin-top: 5em;
     padding: 0.5em 1em;
-    border: solid 3px #62c1ce;
+    border: solid 3px #364e96;
 }
 .box27 .box-title {
     position: absolute;
@@ -26,7 +26,7 @@
     height: 25px;
     line-height: 25px;
     font-size: 17px;
-    background: #62c1ce;
+    background: #364e96;
     color: #ffffff;
     font-weight: bold;
     border-radius: 5px 5px 0 0;

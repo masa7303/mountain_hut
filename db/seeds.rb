@@ -1,4 +1,4 @@
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'a-admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 table_names = %w(articles entries)
 table_names.each do |table_name|

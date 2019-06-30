@@ -1,12 +1,10 @@
 body =
-  "Morning Gloryが4対2でSunflowerに勝利。\n\n" +
-  "2回表、6番渡辺の二塁打から7番山田、8番高橋の連続タイムリーで2点先制。" +
-  "9回表、ランナー一二塁で2番田中の二塁打で2点を挙げ、ダメを押しました。\n\n" +
-  "投げては初先発の山本が7回を2失点に抑え、伊藤、中村とつないで逃げ切りました。"
+  "2019年６月から料金が改正されます。\n\n" +
+  "変更後の詳細は上部タブの「料金」からご確認ください。"
 
 0.upto(9) do |idx|
   Article.create(
-    title: "練習試合の結果#{idx}",
+    title: "ロッジからのお知らせ#{idx}",
     body: body,
     released_at: 8.days.ago.advance(days: idx),
     expired_at: 2.days.ago.advance(days: idx),
