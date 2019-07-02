@@ -19,6 +19,7 @@ ActiveAdmin.register Entry do
         column :body do |entry|
             sanitize(remove_image(entry.body).truncate(100))
         end
+        actions
     end
 
     form do |f|

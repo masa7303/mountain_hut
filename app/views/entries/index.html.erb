@@ -13,35 +13,33 @@
   </header>
 
   <div class="row">
-    <div class="col-8">
+    <div class="col-7">
       <div class="pull-right">
         <% @entries.each do |entry| %>
-          <div class="blog-card">
-            <div class="meta">
-              <div class="photo">
+          <div class="card mb-3 shadow" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4 p-5">
                 <% if first_image(entry.body) != nil %>
-                  <%= image_tag(first_image(entry.body), size: "250x250") %>
+                  <%= image_tag(first_image(entry.body), class:"thumbnail") %>
                 <% else %>
-                  <%= image_tag 'noimage.png', size: "250x250" %>
+                  <%= image_tag 'noimage.png', class:"thumbnail" %>
                 <% end %>
               </div>
-                <ul class="details">
-                  <li class="date"><%= entry.posted_at.strftime("%Y/%m/%d") %></li>
-                </ul>
-            </div>
-              <div class="description">
-                <h1><%= entry.title %></h1>
-                <p><%= sanitize(remove_image(entry.body).truncate(100)) %></p>
-                <p class="read-more">
-                <%= link_to "もっと読む", entry %>
-                </p>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2 class="card-title"><%= entry.title %></h2>
+                  <p class="card-text"><small class="text-muted"><%= entry.posted_at.strftime("%Y/%m/%d") %></small></p>
+                  <p class="card-text"><%= sanitize(remove_image(entry.body).truncate(100)) %></p>
+                  <p class="read-more"><%= link_to "もっと読む", entry %></p>
+                </div>
               </div>
+            </div>
           </div>
         <% end %>
       </div>
     </div>
 
-    <div class="col-4">
+    <div class="col-5">
       <aside class="sidebar">
         <%= render "shared/sidebar" %>
       </aside>
