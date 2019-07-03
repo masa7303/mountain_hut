@@ -12,4 +12,31 @@ ActiveAdmin.register Reserve do
 #   permitted
 # end
 
+  index do
+    selectable_column
+    column :created_at
+    column :name
+    column :phonetic
+    column :number_of_people
+    column :phone_number
+    column :mail
+    column :plan
+    column :reservation_start
+    column :reservation_end
+    actions
+  end
+
+  show do
+    attributes_table do
+      row :created_at
+      row :name
+      row :phonetic
+      row :number_of_people
+      row :phone_number
+      row :mail
+      row :plan
+      row :reservation_start
+      row :reservation_end
+    end
+  end
 end
