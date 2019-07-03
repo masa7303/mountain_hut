@@ -34,7 +34,7 @@
       </tr>
       <tr>
         <th>宿泊内容</th>
-        <td><%= f.text_field :plan %></td>
+        <td><%= f.select :plan, ["一泊二食", "一泊三食", "一泊夕食のみ", "一泊朝食のみ", "素泊まり"], :prompt => "選択してください" %></td>
       </tr>
       <tr>
         <th>パスワード</th>

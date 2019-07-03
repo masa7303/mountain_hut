@@ -9,6 +9,7 @@ ja:
     models:
       member: 職員
       article: ニュース
+      reserve: 予約
       entry: ブログ
     attributes:
       member:
