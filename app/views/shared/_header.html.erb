@@ -1,29 +1,33 @@
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="/"><%= image_tag "logo.png", size: "272x48", alt: "Tateyama Lodge" %></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <%= link_to "紹介", introduction_path, class: "nav-link" %><span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item active">
-              <%= link_to "料金", price_path, class: "nav-link" %><span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item active">
-              <%= link_to "予約", new_reserf_path, class: "nav-link" %><span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item active">
-              <%= link_to "ブログ", entries_path, class: "nav-link" %><span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item active">
-              <%= link_to "ニュース", articles_path, class: "nav-link" %><span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item active">
-              <%= link_to "お問い合わせ", inquiry_index_path, class: "nav-link" %><span class="sr-only">(current)</span>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<header>
+  <h1 class="logo">
+    <%= link_to(root_path) do %>
+      <%= image_tag "logo_ttl.jpg" %>
+    <% end %>
+  </h1>
+  <!-- スマホメニューボタン -->
+  <div class="menu_btn">
+    <%= image_tag "menu_btn_before.png" %>
+  </div>
+  <nav class="NavMenu">
+    <ul>
+      <li>
+        <%= link_to "ABOUT", introduction_path, class: "nav-txt" %>
+      </li>
+      <li>
+        <%= link_to "PRICE", price_path, class: "nav-txt" %>
+      </li>
+      <li>
+        <%= link_to "RESERVE", new_reserf_path, class: "nav-txt" %>
+      </li>
+      <li>
+        <%= link_to "BLOG", entries_path, class: "nav-txt" %>
+      </li>
+      <li>
+        <%= link_to "NEWS", articles_path, class: "nav-txt" %>
+      </li>
+      <li>
+        <%= link_to "CONTACT", inquiry_index_path, class: "nav-txt" %>
+      </li>
+    </ul>
+  </nav>
+</header>

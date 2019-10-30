@@ -1,7 +1,10 @@
-.pull-right {
-  float: right !important;
+header {
+  padding: 60px 0 30px;
 }
-
+.logo {
+  width: 300px;
+  margin: 0 auto 60px;
+}
 .nav-link {
   -webkit-transition: all 0.3s ease !important;
   -moz-transition: all 0.3s ease !important;
@@ -9,7 +12,93 @@
   transition: all  0.6s ease !important;
   font-weight: bold !important;
 }
-
 .nav-link:hover {
   color: #00FFFF !important;
+}
+.nav-txt {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #364e96;
+}
+.nav-txt::after {
+  border-bottom: solid 2px #364e96;
+  bottom: 0;
+  content: "";
+  display: block;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  width: 0;
+}
+.nav-txt:hover {
+  text-decoration: none;
+  color: #364e96;
+}
+.nav-txt:hover::after {
+  width: 100%;
+}
+@media screen and (min-width:1025px) {
+  nav ul {
+    width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+  }
+  nav li {
+    float: left;
+    text-align: center;
+    width: calc( 100% / 6 );
+    font-size: 20px;
+  }
+}
+@media screen and (min-width:641px) {
+  .menu_btn {
+    display: none;
+  }
+}
+/* スマホ */
+@media screen and (max-width: 640px){
+  header {
+    padding: 0 0 30px;
+  }
+  .menu_btn {
+    display: block;
+    background: #364e96;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+  }
+  .NavMenu {
+    position: fixed; /*表示位置を固定*/
+    z-index: 2; /*重ね順を変更*/
+    top: 0; /*表示位置を指定*/
+    left: 0; /*表示位置を指定*/
+    background: #fff;/*背景を白にする*/
+    color: #000; /*文字色を黒にする*/
+    text-align: center; /*テキストを中央揃え*/
+    width: 100%; /*全幅表示*/
+    height: 100vh;
+    transform: translateY(-100%); /*ナビを上に隠す*/
+    transition: all 0.6s; /*アニメーションの時間を指定*/
+  }
+  .active {
+    transform: translateY(0%);
+  }
+  .NavMenu ul {
+    margin-top: 150px;
+  }
+  .NavMenu ul li {
+    margin-top: 15px;
+  }
+}
+ul {
+  font-family: "Montserrat-Black","ヒラギノ角ゴ ProN W6","HiraKakuProN-W3","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","メイリオ Meiryo","ＭＳ Ｐゴシック",Osaka,sans-serif;
+  padding-inline-start: 0;
+}
+li {
+  list-style: none;
 }

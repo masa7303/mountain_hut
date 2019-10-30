@@ -30,6 +30,28 @@
      margin-bottom: 50px;
      text-transform: uppercase;
  }
+ .header_img {
+   width: 100%;
+   height: auto;
+ }
+ @font-face {
+  font-family: 'Montserrat-Black';
+  src: font-url('Montserrat-Black.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.center-title {
+  color: #364e96;/*文字色*/
+  text-align: center;
+}
+.gfont {
+  font-family: 'Montserrat-Black', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+.sub_ttl {
+  color: #364e96;
+}
  #footer {
      background: #364e96 !important;
  }
@@ -50,7 +72,7 @@
  	padding: 3px 0;
  }
  #footer ul.social li a i {
-     margin-right: 5px;
+  margin-right: 5px;
  	font-size:25px;
  	-webkit-transition: .5s all ease;
  	-moz-transition: .5s all ease;

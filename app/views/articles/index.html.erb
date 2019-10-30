@@ -1,4 +1,8 @@
-<h1 class="center-title">ニュース</h1>
+<%= image_tag 'mountain_header.jpg', class: "header_img" %>
+<section class="page_ttl pt-60">
+  <h1 class="center-title gfont">NEWS</h1>
+  <p class="sub_ttl text-center">ニュース</p>
+</section>
 
   <div class="container">
     <div class="row">
@@ -6,13 +10,10 @@
         <div class="post-preview">
           <a href="post.html">
             <% @articles.each do |article| %>
-              <div class="box27">
-                <span class="box-title"><%= article.released_at.strftime("%Y/%m/%d") %></span>
-                  <h2>
-                    <%= link_to article.title, article, class: "post-title" %>
-                  </h2>
-              </div>
-            </a>
+              <table class="articletable">
+                <th class="articletable_day"><%= article.released_at.strftime("%Y/%m/%d") %></th>
+                <td class="articletable_ttl"><%= link_to article.title, article, class: "post-title" %></td>
+              </table>
             <% end %>
         </div>
       </div>

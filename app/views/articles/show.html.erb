@@ -1,23 +1,15 @@
+<%= image_tag 'mountain_header.jpg', class: "header_img" %>
+<section class="page_ttl pt-60">
+  <h1 class="center-title gfont">NEWS</h1>
+  <p class="sub_ttl text-center">ニュース</p>
+</section>
+
 <div class="container">
   <% @page_title = @article.title %>
-  <h1><%= @article.title %></h1>
+  <h2 class="article_ttl"><%= @article.title %></h2>
+  <p class="pt15"><%= @article.released_at.strftime("%Y/%m/%d") %></p>
 
-  <table class="attr">
-    <tr>
-      <th width="100">タイトル</th>
-      <td><%= @article.title %></td>
-    </tr>
-    <tr>
-      <th>本文</th>
-      <td><%= simple_format(@article.body) %></td>
-    </tr>
-    <tr>
-      <th>掲載開始日時</th>
-      <td><%= @article.released_at.strftime("%Y/%m/%d %H:%M") %></td>
-    </tr>
-    <tr>
-      <th>掲載終了日時</th>
-      <td><%= @article.expired_at.try(:strftime, "%Y/%m/%d %H:%M") %></td>
-    </tr>
-  </table>
+  <%= simple_format(@article.body, class: "article_txt") %>
+
+  <%= link_to "一覧に戻る", articles_path, class: "backbtn_txt" %>
 </div>

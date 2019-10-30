@@ -1,5 +1,9 @@
 $("#home").hide().fadeIn(3000);
 
+// メニューボタンクリック時
+$(".menu_btn").on("click",function(){
+  $(".NavMenu").toggleClass("active");
+});
 /*-----
 Spanizer
 - Wraps letters with spans, for css animations

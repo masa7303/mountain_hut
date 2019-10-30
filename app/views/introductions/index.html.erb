@@ -1,103 +1,80 @@
 <main role="main">
+  <%= image_tag 'mountain_header.jpg', class: "header_img" %>
+  <section class="page_ttl pt-60">
+    <h1 class="center-title gfont">ABOUT</h1>
+    <p class="sub_ttl text-center">KEY'S LODGEについて</p>
+  </section>
+
+  <p class="pt50 text-center">
+    KEY'S LODGEは、<br>
+    山を愛する人たちが疲れた体を休める<br>
+    安らぎの場所です
+  </p>
+
+  <div class="firstview_bg">
+    <div class="firstview_top">
+     <div class="first_movie">
+       <iframe class="top_movie" width="60%" src="https://player.vimeo.com/video/361262835" frameborder="0" allow="autoplay;fullscreen" allowfullscreen></iframe>
+     </div>
+     <div class="firstview_top_pic">
+      <%= image_tag "top_img_2.jpg", class: "firstview_top_img" %>
+      <%= image_tag "top_img_3.jpg", class: "firstview_top_img" %>
+     </div>
+    </div>
+    <div class="firstview_under_pic">
+      <%= image_tag "top_img_4.jpg", class: "firstview_under_img" %>
+      <%= image_tag "top_img_5.jpg", class: "firstview_under_img" %>
+      <%= image_tag "top_img_6.jpg", class: "firstview_under_img" %>
+    </div>
+  </div>
+
   <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%= image_tag("first.jpg", :class => "first-slide") %>
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>ここにしかない最高の景色を</h1>
-                <p>立山ロッジの魅力である素晴らしい景色。ぜひ体感してみてください。</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag("second.jpg", :class => "second-slide") %>
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>食を愉しむ</h1>
-                <p>立山ロッジの食事は、美味しい地元食材を使ったこだわりのメニューです。</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag("third.jpg", :class => "third-slide") %>
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>周辺に広がる豊かな自然</h1>
-                <p>周辺には貴重な高山植物をはじめ、ここでしか見られない珍しい動物がいます。</p>
-              </div>
-            </div>
-          </div>
+      <div class="introduce_1">
+       <div class="introduce">
+        <div class="introduce_box justify-content-center">
+         <div class="introduce_parts">
+          <p>「半分の田舎暮らしベース」→「自然＋東京のデュアルライフオフィス」<br>
+           「ツリーハウス・芝生・ウッドデッキ」「奥多摩・青梅飯能キャンプ・<br>
+           焚き火・薪ストーブ」etc　東京から近い自然豊かな川のそばで、<br>
+           上記キーワードの不動産を探して、<br>
+           <br>
+           都会でストレスな会議をおこなっている仲間達へ<br>
+           <br>
+           たまには、川のせせらぎを聴きながら薪ストーブがあるウッドデッキで<br>
+           ミーティングそして、のんびり仕事と趣味が出来るベース（基地）を造ろう！<br>
+           ・・・と、いう計画
+          </p>
+         </div>
+         <div class="space"></div>
+         <div class="text-center d-flex align-items-center">
+          <%= image_tag "introduce_img_1.jpg" %>
+         </div>
         </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+       </div>
       </div>
 
-      <br>
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container marketing">
-
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">癒しの原風景</h2>
-            <p class="lead">A岳は、アルプスの女王と呼ばれる優雅で美しい山です。<br>
-                            白い花崗岩砂礫に色とりどりの高山植物が咲き、四季を通して比較的安全に登れます。</p>
-          </div>
-          <div class="col-md-5">
-            <%= image_tag("river.jpg", :class => "featurette-image img-fluid mx-auto") %>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">高山植物などの豊かな自然</h2>
-            <p class="lead">ロッジの周辺には豊かな自然環境が広がっています。<br>
-                            四季折々の様々な植物が咲き乱れる様子は圧巻です。</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <%= image_tag("flower.jpg", :class => "featurette-image img-fluid mx-auto") %>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">かけがえのない思い出を</h2>
-            <p class="lead">お子さんでも安全に登山できるよう、登山道もしっかり整備されています。<br>
-                            非日常な時間と空間で、ここでしか作れない思い出を作りませんか。</p>
-          </div>
-          <div class="col-md-5">
-            <%= image_tag("walking.jpg", :class => "featurette-image img-fluid mx-auto") %>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-
-      </div><!-- /.container -->
+      <div class="introduce">
+       <div class="introduce_box justify-content-center">
+         <div class="text-center d-flex align-items-center">
+          <%= image_tag "introduce_img_2.jpg" %>
+         </div>
+         <div class="space"></div>
+         <div class="introduce_parts">
+          <p>場所は<br>
+            東京吉祥寺駅から中央線で青梅駅へ<br>
+            そこから車で17～8分<br>
+            飯能名栗川の川沿いに建つ築30年？40年？の古民家（ただの古家？＾＾；）<br>
+            <br>
+            さて、
+            のんびりと建築リノベーションやお庭の造成などしながら<br>
+            造っていこうと思います。<br>
+            もし、上記のキーワード？に興味のある方は、どうぞこの計画webたまに<br>
+            のぞいてみてやって下さい。ただ、気ままなページですので、<br>
+            その点、お許しください
+          </p>
+         </div>
+       </div>
+      </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

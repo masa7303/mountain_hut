@@ -1,3 +1,27 @@
+.article_ttl {
+  color: #364e96;
+}
+.pt15 {
+  padding-top: 15px;
+  color: #364e96;
+}
+.article_txt {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.articletable {
+  margin: 0 auto;
+}
+.articletable_day {
+  color: #999;
+  font-size: 0.933em;
+  font-weight: 600;
+  padding: 7px 0;
+  width: 120px;
+}
+.articletable_ttl {
+  font-size: 1.2rem;
+}
 .post-title-back {
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-weight: 800;
@@ -6,32 +30,19 @@
   background: #364e96;/*背景色*/
   border-left: solid 5px #364e96;/*左線（実線 太さ 色）*/
 }
-
 .post-title {
   color: black;/*文字色*/
 }
-
-.box27 {
-    position: relative;
-    margin-top: 5em;
-    padding: 0.5em 1em;
-    border: solid 3px #364e96;
+.backbtn_txt {
+  background-color: #364e96;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
 }
-.box27 .box-title {
-    position: absolute;
-    display: inline-block;
-    top: -27px;
-    left: -3px;
-    padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 17px;
-    background: #364e96;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
-}
-.box27 p {
-    margin: 0;
-    padding: 0;
+.backbtn_txt:hover {
+  background-color: #364e96;
+  color: black;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 5px;
 }
