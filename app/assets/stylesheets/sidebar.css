@@ -1,33 +1,30 @@
 .sidebar_title {
-  background: #c2edff;/*背景色*/
   padding: 0.5em;/*文字まわり（上下左右）の余白*/
-  color: white;
+  color: #364e96;
+  letter-spacing: 0.05rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #ddd;
 }
-
-/* 右の枠 */
 aside.sidebar {
   width:230px;
   padding: 5px;
   font-size: 86%;
   flex-direction: row;
-  background-color: #EEEEEE;
 }
-
-.test {
+.sidebar_txtbox {
   padding: 0.5em 1em 0.5em 2.3em;
   position: relative;
 }
-
-.test li {
+.sidebar_txtbox li {
   line-height: 1.5;
   padding: 0.5em 0;
+  color: #364e96;
   list-style-type: none!important;
 }
-
-.test li:before {
+.sidebar_txtbox li:before {
   font-family: "FontAwesome";
   content: "\f138";/*アイコンの種類*/
   position: absolute;
   left : 1em;/*左端からのアイコンまでの距離*/
-  color: skyblue;/*アイコン色*/
+  color: #364e96;
 }

@@ -67,9 +67,16 @@
 }
 .introduce_parts {
                  line-height: 2rem;
+                 height: 384px;
                  width: 530px;
                  text-align: center;
                  font-size: 15px;
+                 vertical-align: middle;
+                 display: table;
+}
+.introduce_parts span {
+  display: table-cell;
+  vertical-align: middle;
 }
 .introduce_pic {
                border: solid 10px #fff;
