@@ -28,3 +28,52 @@ table.table {
   width: 700px;
   margin: 0 auto;
 }
+@media screen and (max-width:768px) {
+  table.table {
+    width: 100%;
+  }
+}
+
+.reserve-table {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+@media screen and (max-width:768px) {
+  .reserve-table {
+    width: 90%;
+  }
+}
+
+.reserve-table tr {
+  border-top: 1px solid #dee2e6;
+}
+
+.reserve-table tr th {
+  padding-left: 10px;
+  height: 50px;
+}
+@media screen and (max-width:768px) {
+  .reserve-table tr th,
+  .reserve-table tr td {
+    display: block;
+    line-height: 50px;
+    padding-left: 10px;
+  }
+}
+
+.reserve-table input {
+  width: 80%;
+}
+@media screen and (max-width:768px) {
+  .reserve-table input {
+    border: 1px solid #dee2e6;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .reserve-table select {
+    border: 1px solid #dee2e6;
+  }
+}

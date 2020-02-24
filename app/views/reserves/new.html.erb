@@ -1,5 +1,3 @@
-<% if flash.alert %><p class="alert"><%= flash.alert %></p><% end %>
-
 <%= form_for @reserve do |f| %>
   <%= image_tag 'mountain_header.jpg', class: "header_img" %>
   <section class="page_ttl pt-60">
@@ -7,7 +5,11 @@
     <p class="sub_ttl text-center">予約情報</p>
   </section>
 
-    <table class="table">
+  <% if flash[:notice] %>
+    <p class="flash-txt"><%= flash[:notice] %></p>
+  <% end %>
+
+    <table class="reserve-table">
       <tr>
         <th>宿泊予定日</th>
         <td><%= f.date_select :reservation_start, {:use_month_numbers => true } %> 〜 <%= f.date_select :reservation_end, {:use_month_numbers => true } %></td>
@@ -49,5 +51,5 @@
         <td><%= f.text_field :password_confirm %></td>
       </tr>
     </table>
-    <%= f.submit '確認', class: 'btn btn-primary mx-auto d-block' %>
+    <%= f.submit '確認', class: 'btn btn-primary mx-auto d-block contact-btn' %>
 <% end %>

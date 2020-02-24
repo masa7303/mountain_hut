@@ -15,16 +15,18 @@ class ReservesController < ApplicationController
     capacity = @reservations.sum(:number_of_people)
 
     if capacity + @reserve.number_of_people > 10
-      flash.alert = "ご希望の宿泊期間はは利用者数の上限に達しているためご利用できません"
+      flash[:notice] = "ご希望の宿泊期間は利用者数の上限に達しているためご利用できません"
+      render :new
     elsif count > 5
-      flash.alert = "ご希望の宿泊予定日は満室なためご利用できません"
+      flash[:notice] = "ご希望の宿泊予定日は満室なためご利用できません"
+      render :new
     elsif @reserve.save
       redirect_to @reserve, notice: "予約を受付けました"
     end
   end
 
-
-
+  def index
+  end
 
   private
 

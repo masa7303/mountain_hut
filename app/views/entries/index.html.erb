@@ -5,12 +5,12 @@
 </section>
 
   <div class="row">
-    <div class="col-7">
+    <div class="col-lg-7 col-md-12">
       <div class="pull-right">
         <% @entries.each do |entry| %>
           <div class="card mb-3 shadow" style="max-width: 540px;">
             <div class="row no-gutters">
-              <div class="col-md-4 p-5">
+              <div class="col-md-4 p-5 img-txt-center">
                 <% if first_image(entry.body) != nil %>
                   <%= image_tag(first_image(entry.body), class:"thumbnail") %>
                 <% else %>
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="col-5">
+    <div class="col-lg-5">
       <aside class="sidebar">
         <%= render "shared/sidebar" %>
       </aside>

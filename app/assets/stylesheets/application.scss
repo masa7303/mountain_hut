@@ -18,6 +18,26 @@
  @import "bootstrap";
  @import "font-awesome";
 
+ html {
+   font-size: 62.5%;
+ }
+ .fs-12 {
+   font-size: 1.2rem;
+ }
+ .fs-14 {
+   font-size: 1.4rem;
+ }
+ .width-60 {
+   width: 60%;
+   margin: 0 auto;
+ }
+ .mt-80 {
+   margin-top: 80px;
+ }
+ .mb-80 {
+   margin-bottom: 80px;
+ }
+
  /* Footer */
  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
  section {
@@ -43,6 +63,7 @@
 .center-title {
   color: #364e96;/*文字色*/
   text-align: center;
+  font-size: 4rem;
 }
 .gfont {
   font-family: 'Montserrat-Black', sans-serif;
@@ -51,6 +72,10 @@
 }
 .sub_ttl {
   color: #364e96;
+}
+
+footer {
+  padding: 0;
 }
  #footer {
      background: #364e96 !important;

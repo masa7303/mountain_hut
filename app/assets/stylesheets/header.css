@@ -4,7 +4,23 @@ header {
 .logo {
   width: 300px;
   margin: 0 auto 60px;
+  text-align: center;
 }
+@media screen and (max-width:768px) {
+  .logo {
+    width: auto;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .logo img {
+    width: 50%;
+    height: auto;
+  }
+}
+
 .nav-link {
   -webkit-transition: all 0.3s ease !important;
   -moz-transition: all 0.3s ease !important;

@@ -20,6 +20,12 @@
   padding:  0 4;
 }
 
+@media screen and (min-width:769px) {
+  .home-title br {
+    display: none;
+  }
+}
+
 .home-content {
   text-align: center;
   margin-top: 28%;

@@ -5,22 +5,31 @@
   font-size: 0.8rem;
   border-bottom: 1px solid #ddd;
 }
+
 aside.sidebar {
   width:230px;
   padding: 5px;
   font-size: 86%;
   flex-direction: row;
 }
+@media screen and (max-width:768px) {
+  aside.sidebar {
+    display: none;
+  }
+}
+
 .sidebar_txtbox {
   padding: 0.5em 1em 0.5em 2.3em;
   position: relative;
 }
+
 .sidebar_txtbox li {
   line-height: 1.5;
   padding: 0.5em 0;
   color: #364e96;
   list-style-type: none!important;
 }
+
 .sidebar_txtbox li:before {
   font-family: "FontAwesome";
   content: "\f138";/*アイコンの種類*/

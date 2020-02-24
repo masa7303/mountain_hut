@@ -3,7 +3,7 @@
 </div>
 
   <% entries = Entry.order(posted_at: :desc).limit(5) %>
-  <ul class="sidebar_txtbox">
+  <ul class="sidebar_txtbox fs-14">
       <% entries.each do |entry| %>
         <li><%= link_to entry.title, entry %></li>
       <% end %>

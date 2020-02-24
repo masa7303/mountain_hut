@@ -1,7 +1,14 @@
 .firstview_bg {
-              margin-top: 20px;
-              padding:20px 100px 20px 100px;
+  margin-top: 20px;
+  padding:20px 100px 20px 100px;
 }
+@media screen and (max-width:768px) {
+  .firstview_bg {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+}
+
 .first_movie {
              position: relative;
              width: 60%;
@@ -62,18 +69,55 @@
                                   border-right: solid 3px #fff;
 }
 .introduce_box {
-               display: flex;
-               margin-top: 85px;
+  margin-top: 85px;
 }
 .introduce_parts {
-                 line-height: 2rem;
-                 height: 384px;
-                 width: 530px;
-                 text-align: center;
-                 font-size: 15px;
-                 vertical-align: middle;
-                 display: table;
+  position: relative;
+  height: 384px;
+  width: 530px;
+  text-align: center;
+  font-size: 15px;
+  vertical-align: middle;
+  display: table;
 }
+@media screen and (max-width:768px) {
+  .introduce_parts {
+    height: 0;
+    margin-top: 30px;
+    order: 2;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .introduce_parts p {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width:768px) {
+  .introduce_parts p br {
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .introduce_img {
+    order: 1;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .introduce_img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .introduce_parts span {
   display: table-cell;
   vertical-align: middle;

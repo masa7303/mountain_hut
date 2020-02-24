@@ -1,13 +1,13 @@
 <div class="container">
-  <% @page_title = @entry.title %>
-  <h1><%= @entry.title %></h1>
-  <p><%= @entry.posted_at.strftime("%Y/%m/%d %H:%M") %></p>
+  <div class="width-60">
+    <% @page_title = @entry.title %>
+    <h1><%= @entry.title %></h1>
+    <p class="entry-data"><%= @entry.posted_at.strftime("%Y/%m/%d %H:%M") %></p>
 
-  <table class="attr">
-    <tr>
-      <td><%= sanitize(@entry.body) %></td>
-    </tr>
-  </table>
+    <div class="entry-contents">
+      <%= sanitize(@entry.body) %>
+    </div>
 
-  <%= link_to '戻る', entries_path %>
+    <%= link_to '戻る', entries_path %>
+  </div>
 </div>

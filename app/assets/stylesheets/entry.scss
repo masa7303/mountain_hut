@@ -28,10 +28,54 @@ div#blog-container {
   margin-right: 20px;
 }
 
+.entry-data {
+  text-align: right;
+}
+
 .entry-body {
   float: left;
 }
 
+.entry-contents {
+  width: 100%;
+}
+
+.entry-contents img {
+  width: 100%;
+  height: auto;
+}
+
+.entry-contents p {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  margin-top: 30px;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width:768px) {
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .card-body {
+    width: 80vw!important;
+    margin: 0 auto;
+  }
+}
+
+.card-text {
+  word-wrap: break-word;
+}
+
+@media screen and (min-width: 1025px) {
+  ul.pagination li {
+    width: calc( 30% / 6 )!important;
+    font-size: 10px!important;
+  }
+}
 /*PEN STYLES*/
 
 * {
@@ -227,11 +271,22 @@ $color_grey_dark: #a2a2a2;
   margin-top: 25px;
   margin-right: 15px;
 }
+@media screen and (max-width:768px) {
+  .thumbnail {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .img-txt-center {
+    text-align: center;
+  }
+}
+
 .read-more {
   text-align: right;
   a {
     color: $color_prime;
-    display: inline-block;
     position: relative;
     &:after {
       content: "\f061";
